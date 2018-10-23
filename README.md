@@ -1,1 +1,1 @@
-sw-website
+MIT Senior Week Website
