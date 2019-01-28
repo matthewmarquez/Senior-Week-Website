@@ -1,0 +1,50 @@
+h1 {
+    font-family: "Avenir";
+}
+
+a {
+    color: black;
+}
+
+body {
+    font-family: "Avenir";
+    font-size: 14pt;
+    background-image: url("skyline.jpg");
+    background-attachment:fixed;
+}
+
+.mycontent {
+    color: #ffffff;
+    background-color: rgba(148, 148, 148, 0.77);
+    margin-top: 5%;
+    margin-bottom: 0%;
+    padding: 2%;
+    height: 75%;
+    box-shadow: 10px, 10px, 5px, grey;
+}
+
+.morecontent {
+    color: #ffffff;
+    background-color: rgba(148, 148, 148, 0.77);
+    margin-top: 6%;
+    margin-bottom: 5%;
+    padding: 2%;
+    height: 75%;
+    box-shadow: 10px, 10px, 5px, grey;
+}
+
+.bigview {
+    padding:5%;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+
+footer {
+    background-color: #f1f1f1;
+    padding: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 0%;
+}
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Senior Week 2018 - Lottery</title>
+    <link rel="icon" href="../css/pictures/logo.png">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/fonts-quicksand.css" />
+    <link rel='stylesheet' type='text/css' href='../css/fonts-yellowtail.css'>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <script src="../js/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="../js/typed.js"></script>
+	<script src="../js/lottery_scripts.js"></script>
+
+	<script type=text/JavaScript>
+		
+		$(window).scroll(function() {
+	    	if ($(".navbar").offset().top > 1) {
+	        	$('#custom-nav').addClass('affix');
+	    	} else {
+	        	$('#custom-nav').removeClass('affix');
+	    	} 
+		});
+		
+
+		$(document).ready(function(){
+	  		$(".jumbotron h1").hide();
+	  		$(".arrow").hide();
+	  		$(".contact-info h1").hide();
+	  	});
+	</script>
+
+</head>
+<body>
+	<div id="custom-nav" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	         	<span class="sr-only">Menu</span>
+	         	<span class="icon-bar"></span>
+	          	<span class="icon-bar"></span>
+	          	<span class="icon-bar"></span>
+	        </button>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="../">S<span class="hide-this">enior</span>W<span class="hide-this">eek</span> 2017</a>	
+			</div>
+
+			<nav class="collapse navbar-collapse">
+				<ul class="nav nav-pills navbar-right">
+  					<li ><a href="../">Home</a></li>
+  					<li ><a href="../events">Events</a></li>
+  					<li ><a href="../schedule">Schedule</a></li>
+  					<li ><a href="./">Lottery</a></li>
+  					<li ><a href="../committee">Committee</a></li>
+  					<li ><a href="../contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="main">
+		 
+	<div class="skills">
+		<div class="top"></div>
+		<div class="bottom">
+			<h1> The Lottery! </h1>
+			<br>
+			<h2><a href="https://www.youtube.com/watch?v=aYkuuu9u3EI&feature=youtu.be&t=1m6s"> Who Are You? </a></h2>
+			<p>Please fill this out so we can send you lottery results:</p>
+			<p>First Name: <input type="text" name="fname" id="fname" required/> </p>
+			<p>Last Name: <input type="text" name="lname" id="lname" required/> </p>
+			<p>Kerberos (YOUR_KERBEROS@mit.edu): <input type="text" name="kerberos" id="kerberos" required/> </p>
+			<br>
+
+			<h2><a href="https://www.youtube.com/watch?v=aYkuuu9u3EI&feature=youtu.be&t=1m6s"> And What Do You Want? </a></h2>
+			<h3> Please Rank Each Event, Rank 1 Being Your Most Preferred </h3>
+			<h4> Single Person Event Preferences - </h4>
+			
+			<p>Boston Harbor Island Cruise: 
+			<select id="BH" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Downeast Cider House Tour: 
+			<select id="DCH" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Go-karting at F1 Boston: 
+			<select id="F1" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Harpoon Brewery: 
+			<select id="HB" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Improv Asylum: 
+			<select id="IA" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Kayaking on the Charles: 
+			<select id="KC" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Laser Tag: 
+			<select id="LT" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Paint Nite: 
+			<select id="PN" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Paintball: 
+			<select id="PB" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Parasailing and Beach Day: 
+			<select id="PS" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Rock Climbing at Metro Rock: 
+			<select id="RC" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Six Flags: 
+			<select id="SF" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Skydiving: 
+			<select id="SD" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Skyzone Trampoline Park and Dodgeball: 
+			<select id="STPD" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Taza Chocolate Factory Tour: 
+			<select id="TT" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>White Water Rafting: 
+			<select id="WWR" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Winery Tour: 
+			<select id="Wine" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<br>
+
+			<h2> Group Event Preferences </h2>
+
+			<p>Group Member Kerberoses (Please separate with commas or I will be sad):<br>
+			<input type="text" name="groupKerbs" id="groupKerbs"/></p>
+
+			<p>Boda Borg: 
+			<select id="BB" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<p>Bowling: 
+			<select id="BW" class="event-drop" onChange="optionSelected.call(this, event)" required>
+			</select>
+			</p>
+			<br>
+
+			<h2> Availability </h2>
+			<p><input type="checkbox" name="62early" id="62early"> Friday June 2nd, Before 3pm <br></p>
+			<p><input type="checkbox" name="62late" id="62late"> Friday June 2nd, After 3pm <br></p>
+			<p><input type="checkbox" name="63early" id="63early"> Saturday June 3rd, Before 3pm <br></p>
+			<p><input type="checkbox" name="63late" id="63late"> Saturday June 3rd, After 3pm <br></p>
+			<p><input type="checkbox" name="64early" id="64early"> Sunday June 4th, Before 3pm <br></p>
+			<p><input type="checkbox" name="64late" id="64late"> Sunday June 4th, After 3pm <br></p>
+			<p><input type="checkbox" name="65early" id="65early"> Monday June 5th, Before 3pm <br></p>
+			<p><input type="checkbox" name="65late" id="65late"> Monday June 5th, After 3pm <br></p>
+			<p><input type="checkbox" name="66early" id="66early"> Tuesday June 6th, Before 3pm <br></p>
+			<p><input type="checkbox" name="66late" id="66late"> Tuesday June 6th, After 3pm <br></p>
+			<p><input type="checkbox" name="67early" id="67early"> Wednesday June 7th, Before 3pm <br></p>
+			<br>
+
+			<div class="projects" style="text-align: center">
+				<button id="enter_lottery" type="button" onclick="enter_lottery()" href="https://docs.google.com/forms/d/e/1FAIpQLSegca7ijSKQ6YJdDkSIwxa0Tlgud1-SwhKe7psnsyEiZMAgTA/viewform?c=0&w=1" 
+				style="background-color: #800000; padding: 14px 40px; opacity:.85; border-radius: 12px; color: white; font-size: 22px;">Submit Lottery Entry</button>
+			</div>
+			<br>
+			
+		</div>
+
+	</div>
+
+	</div>
+	<div class="footer">
+		<ul>
+			<li><a class="fa fa-facebook fa-4x" href="https://www.facebook.com/MIT2017ClassCouncil" target="_blank"></a></li>
+			<li><a class="fa fa-instagram fa-4x" href="https://www.instagram.com/mitstudents/" target="_blank"></a></li>
+			<li><a class="fa fa-twitter fa-4x" href="https://twitter.com/mitstudents" target="_blank"></a></li>
+		</ul>
+	</div>
+
+	<script type="text/JavaScript">initialize();</script>
+</body>
+</html>
