@@ -1,0 +1,14 @@
+import airtable
+import csv
+
+filename = FILENAME
+
+opsins_database = airtable.Airtable(BASE KEY, TABLE NAME, API KEY)
+
+records = airtable.get_all()
+
+#https://stackoverflow.com/questions/3086973/how-do-i-convert-this-list-of-dictionaries-to-a-csv-file
+with open(filename, 'wb') as f:
+    dict_writer = csv.DictWriter(f, opsins_database[0].keys())
+    dict_writer.writeheader()
+    dict_writer.writerows(ospins_database)
